@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "outDir": "compiled",
+        "noEmit": true,
+        "esModuleInterop": true,
+        "target": "es5",
+        "typeRoots": [
+            "node_modules/@types/"
+        ],
+        "strictNullChecks": true,
+        "module": "es6",
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "checkJs": false,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "strict": true,
+        "lib": [
+            "dom",
+            "es5",
+            "es6",
+            "es2017",
+            "scripthost"
+        ],
+        "baseUrl": "./packages",
+        "paths": {
+            "ui-components": ["ui-components/src"],
+            "ui-components/*": ["ui-components/src/*"],
+            "@utils": ["@utils/src"],
+            "@utils/*": ["@utils/src/*"],
+            "base-app": ["base-app/src"],
+            "base-app/*": ["base-app/src/*"]
+        },
+        "plugins": [
+            { "transform": "ts-auto-mock/transformer", "cacheBetweenTests": false }
+        ]
+    },
+    "exclude": ["node_modules"]
+}
